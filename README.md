@@ -35,7 +35,7 @@ If everything works well, you will see the following message as output:
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
 
-That works? Great! Go to `http://0.0.0.0:5000/` to check out the REST API, or to `http://0.0.0.0:5000/app` to try out the webapp. In step 2, we will discuss how to use the Object Detector.
+That works? Great! Go to `http://0.0.0.0:5000/` in your browser to check out the REST API, or to `http://0.0.0.0:5000/app` to try out the webapp. In step 2, we will discuss how to use the Object Detector.
 
 If you would like a more detailed tutorial, or if you are having trouble, please check out
 - [MAX Object Detector README](https://github.com/IBM/MAX-Object-Detector/blob/master/README.md)
@@ -44,7 +44,11 @@ If you would like a more detailed tutorial, or if you are having trouble, please
 
 ### 2. Using the Object Detector
 
-[How to use the object detector]
+Now that you have the Object Detector up and running, there are a couple ways to use the model to detect objects in images. In any case, the model takes an image as input, and outputs the location and category of the object.
+
+**A. The user-friendly WebApp**
+
+Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under the `Upload an image` section on the left, you can upload and submit an image to the model. Try [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/dog-human.png) image for example.
 
 ### 3. Explore other MAX Models
 
