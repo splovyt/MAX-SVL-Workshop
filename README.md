@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/ibm-logo.png" height=50 align="right">
+
 # Getting Started with Deep Learning and the Model Asset Exchange (MAX)
 
 This repository contains all information for the hands-on part of the session.
