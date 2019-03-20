@@ -109,7 +109,7 @@ For detailed tutorial, or if you are having trouble, please check out [MAX Objec
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/swagger-ui.png" width=100% align="center">
 
 
-### 2. Consume MAX model : Tru out WebApp version
+### 2. Consume MAX model : Try out WebApp version
 
 Now that you have the Object Detector up and running, there are a couple ways to use the model to detect objects in images. In any case, the model takes an image as input, and outputs the location and category of the object.
 
