@@ -108,7 +108,15 @@ Instead of opening a browser, copying the url and uploading an image to the `/mo
 
 ### 3. Explore other MAX Models
 
-[See Notebook in this Repository]
+*If this is your first time using jupyter notebooks or Python, please ask one of the hosts for assistance to ensure a proper setup. We're happy to help find a solution that works for you!*
+
+In part 3 of this tutorial, we will look at some of the other exciting AI models that the Model Asset Exchange has to offer. For this demonstration, we will use the Python programming language with [Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html) as an interactive coding environment. 
+
+Following the [installation](https://jupyter.readthedocs.io/en/latest/install.html) of Jupyter, you can navigate to the `3. Exploring MAX` folder in this repository using the terminal. Start a Jupyter Notebook with the following command:
+
+`jupyter notebook`
+
+If the installation was successful, your browser will be opened and redirected to a new tab with a file explorer. Navigate to the `Exploring MAX.ipynb` file in the browser and open it. Please follow the instructions in the notebook. We are happy to help if you are experiencing trouble.
 
 ### 4. (Bonus) Integrate a MAX Deep Learning Model in your own web application
 
