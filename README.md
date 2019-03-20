@@ -53,6 +53,7 @@ Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under 
 The `Probability Threshold` slider can be adjusted to show less certain labels (lower threshold) or more certain labels (higher threshold). On the right, you can find the `Labels Found` section in which you can click to highlight or deactivate the corresponding object.
 
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/webapp.png" width=100% align="center">
+*The Webapp*
 
 **B. The Swagger UI for the REST API**
 
@@ -105,6 +106,7 @@ This can be interpreted as follows:
 - `"predictions": [ ...`: this field contains the predictions. There are two predictions being returned with probability threshold over 0.7. The first prediction is a **Horse** with probability 0.98. The detection box surrounding the horse is given by 4 coordinates which represent the 4 points needed to reconstruct a rectangle arround the horse. The same is true for the second object, **Person** with probability 0.81.
 
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/swagger-ui.png" width=100% align="center">
+*The Swagger UI*
 
 **C. Querying the API programmatically**
 
