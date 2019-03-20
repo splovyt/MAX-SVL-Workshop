@@ -52,6 +52,8 @@ Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under 
 
 The `Probability Threshold` slider can be adjusted to show less certain labels (lower threshold) or more certain labels (higher threshold). On the right, you can find the `Labels Found` section in which you can click to highlight or deactivate the corresponding object.
 
+<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/webapp.png" width=100% align="center">
+
 **B. The Swagger UI for the REST API**
 
 The second way to access to the object detector is by navigating to `http://0.0.0.0:5000/` in the browser. This URL will return a more technical overview of the model, including all information about the REST API and what endpoints are available. An API (application programming interface) is a set of functions associated with a computer algorithm that allows us to request (GET) information from the underlying algorithm or send information (POST) to the underlying algorithm. This API is basically the front door of the factory (= object detection algorithm).
@@ -101,6 +103,8 @@ An example of the response body for [this](https://raw.githubusercontent.com/spl
 This can be interpreted as follows:
 - `"status": "ok"`: the query was successful
 - `"predictions": [ ...`: this field contains the predictions. There are two predictions being returned with probability threshold over 0.7. The first prediction is a **Horse** with probability 0.98. The detection box surrounding the horse is given by 4 coordinates which represent the 4 points needed to reconstruct a rectangle arround the horse. The same is true for the second object, **Person** with probability 0.81.
+
+<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/swagger-ui.png" width=100% align="center">
 
 **C. Querying the API programmatically**
 
