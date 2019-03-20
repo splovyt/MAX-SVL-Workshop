@@ -48,7 +48,63 @@ Now that you have the Object Detector up and running, there are a couple ways to
 
 **A. The user-friendly WebApp**
 
-Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under the `Upload an image` section on the left, you can upload and submit an image to the model. Try [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/dog-human.png) image for example.
+Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under the `Upload an image` section on the left, you can upload and submit an image to the model. Try [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image for example.
+
+The `Probability Threshold` slider can be adjusted to show less certain labels (lower threshold) or more certain labels (higher threshold). On the right, you can find the `Labels Found` section in which you can click to highlight or deactivate the corresponding object.
+
+**B. The Swagger UI for the REST API**
+
+The second way to access to the object detector is by navigating to `http://0.0.0.0:5000/` in the browser. This URL will return a more technical overview of the model, including all information about the REST API and what endpoints are available. An API (application programming interface) is a set of functions associated with a computer algorithm that allows us to request (GET) information from the underlying algorithm or send information (POST) to the underlying algorithm. This API is basically the front door of the factory (= object detection algorithm).
+
+You can try out the API by unfolding the `model` section. Under the `model` section, you can find the three endpoints of this API:
+
+- `/model/labels`
+- `/model/metadata`
+- `/model/predict`
+
+The first two endpoints are `GET` methods. This means that calling these (by unfolding and clicking the `Try it out` and `Execute` buttons) will return us information. `/model/labels` returns the list of objects that the model is able to detect in text-format in the response body. `/model/metadata` returns the metadata (technical information) about the model. 
+
+The last endpoint, `/model/predict`, is a `POST` method. This means that we can send information to this endpoint in order to pass it to the object detection algorithm. We can send an image to this `/model/predict` endpoint in order to have the model's object predictions returned. Click on the `Try it out` button, upload an image, and click `Execute`. As a result, you should receive `Code: 200` for a successful query. In addition, under `Details`, one can find the `Response body` containing the predictions. 
+
+An example of the response body for [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image is:
+
+```
+{
+  "status": "ok",
+  "predictions": [
+    {
+      "label_id": "19",
+      "label": "horse",
+      "probability": 0.9800629615783691,
+      "detection_box": [
+        0.15102773904800415,
+        0.25595149397850037,
+        0.9119446873664856,
+        0.7204358577728271
+      ]
+    },
+    {
+      "label_id": "1",
+      "label": "person",
+      "probability": 0.8138303756713867,
+      "detection_box": [
+        0.039235919713974,
+        0.3334605097770691,
+        0.4493279755115509,
+        0.5806631445884705
+      ]
+    }
+  ]
+}
+```
+
+This can be interpreted as follows:
+- `"status": "ok"`: the query was successful
+- `"predictions": [ ...`: this field contains the predictions. There are two predictions being returned with probability threshold over 0.7. The first prediction is a **Horse** with probability 0.98. The detection box surrounding the horse is given by 4 coordinates which represent the 4 points needed to reconstruct a rectangle arround the horse. The same is true for the second object, **Person** with probability 0.81.
+
+**C. Querying the API programmatically**
+
+Instead of opening a browser, copying the url and uploading an image to the `/model/predict` endpoint by hand, you can programmatically access this API using a library for your programming language of choice. For example, in Python, one can use the `requests` library to efficiently and automatically make `GET` and `POST` requests. An example of this can be found in the notebook under the next section.
 
 ### 3. Explore other MAX Models
 
