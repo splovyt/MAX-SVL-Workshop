@@ -8,6 +8,8 @@ Slides URL: **[Add slides URL here]**
 
 ## Hands-On MAX Tutorial
 
+<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/object-detection.png" width=300 align="right">
+
 ### 1. Install and run the MAX Object Detector
 
 Getting started with the bleeding edge of Deep Learning is extremely easy.. and free!
@@ -34,7 +36,6 @@ If everything works well, you will see the following message as output:
 ```
 
 That works? Great! Go to `http://0.0.0.0:5000/` to check out the REST API, or to `http://0.0.0.0:5000/app` to try out the webapp. In step 2, we will discuss how to use the Object Detector.
-
 
 If you would like a more detailed tutorial, or if you are having trouble, please check out
 - [MAX Object Detector README](https://github.com/IBM/MAX-Object-Detector/blob/master/README.md)
