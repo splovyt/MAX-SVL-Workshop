@@ -8,6 +8,10 @@ This repository contains all information for the hands-on part of the session.
 
 Slides URL: **[Add slides URL here]**
 
+## While waiting...
+
+Please install [Docker](https://docs.docker.com/install/) and [Jupyter](https://jupyter.readthedocs.io/en/latest/install.html) while waiting to save time later.
+
 ## Hands-On MAX Tutorial
 
 We will be using [MAX-Object-Detector](https://github.com/IBM/MAX-Object-Detector) throughout the workshop for the ease of understanding. This model uses AI to detect objects in an image.
