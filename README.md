@@ -28,7 +28,7 @@ If the above command returns the Docker version, you are pretty much there!
 
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/object-detection.png" width=300 align="right">
 
-### 1. Using pre-built docker image from Docker Hub
+### 1. Using a pre-built Docker image from Docker Hub
 
 Getting the Object Detector to run is as easy as copying the command below into your terminal. This will take some time depending on your download speed.
 
@@ -108,12 +108,12 @@ This can be interpreted as follows:
 
 - `"predictions": [ ...`: this field contains the predictions. There are two predictions being returned with probability threshold over 0.7. The first prediction is a **Horse** with probability 0.98. The detection box surrounding the horse is given by 4 coordinates which represent the 4 points needed to reconstruct a rectangle arround the horse. The same is true for the second object, **Person** with probability 0.81.
 
-For detailed tutorial, or if you are having trouble, please check out [MAX Object Detector README](https://github.com/IBM/MAX-Object-Detector/blob/master/README.md)
+For more information, or if you are having trouble, please check out [MAX Object Detector README](https://github.com/IBM/MAX-Object-Detector/blob/master/README.md)
 
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/swagger-ui.png" width=100% align="center">
 
 
-### 2. Consume MAX model : Try out WebApp version
+### 2. Consuming a MAX model: Using the Object Detector
 
 Now that you have the Object Detector up and running, there are a couple ways to use the model to detect objects in images. In any case, the model takes an image as input, and outputs the location and category of the object.
 
@@ -127,17 +127,17 @@ The `Probability Threshold` slider can be adjusted to show less certain labels (
 
 Instead of opening a browser, copying the url and uploading an image to the `/model/predict` endpoint by hand, you can programmatically access this API using a library for your programming language of choice. For example, in Python, one can use the `requests` library to efficiently and automatically make `GET` and `POST` requests. An example of this can be found in the notebook under the next section.
 
-### 3. Integrate a MAX Object Detector Model in your own web application 
+### 3. Integrate a MAX Deep Learning Model in your own web application 
 
 Have you always wanted to launch your own AI-powered webservice? Using the following tutorial, you will be able to spin up and deploy your own webservice in a matter of minutes. 
 
-#### 3.1 Querying the API programmatically
+#### 3.1 Exploring other MAX models: querying the API programmatically
 
-As a first step, let's understand how to programmatically access this API using a library for your programming language of choice. For example, in Python, one can use the `requests` library to efficiently and automatically make `GET` and `POST` requests. 
+First, let's understand how to programmatically access this API using a library for your programming language of choice. For example, in Python, one can use the `requests` library to efficiently and automatically make `GET` and `POST` requests. 
 
 *If this is your first time using jupyter notebooks or Python, please ask one of the hosts for assistance to ensure a proper setup. We're happy to help find a solution that works for you!*
 
-Along with object detector, we will look at some of the other exciting AI models that the Model Asset Exchange has to offer. For this demonstration, we will use the Python programming language with [Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html) as an interactive coding environment. 
+Here, we will look at some of the other exciting AI models that the Model Asset Exchange has to offer. For this demonstration, we will use the Python programming language with [Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html) as an interactive coding environment. 
 
 Following the [installation](https://jupyter.readthedocs.io/en/latest/install.html) of Jupyter, you can navigate to the `Exploring_MAX` folder in this repository using the terminal. Start a Jupyter Notebook with the following command:
 
@@ -145,22 +145,32 @@ Following the [installation](https://jupyter.readthedocs.io/en/latest/install.ht
 
 If the installation was successful, your browser will be opened and redirected to a new tab with a file explorer. Navigate to the `Exploring MAX.ipynb` file in the browser and open it. Please follow the instructions in the notebook. We are happy to help if you are experiencing trouble.
 
-#### 3.2 Create own object detector WebApp
+Using this notebook, you will
+- Explore other MAX models
+- Learn how to query the APIs programmatically
 
-In the below tutorial, you will
+#### 3.2 Creating your own (object detector) WebApp
+
+Now that we know how to access a Model API, we can integrate one in a webapp.
+
+In this section, you will
 - Download the backbone of a basic web application
 - Integrate the Deep Learning MAX model of your choice in the webapp
 - Launch the webapp!
 
+Let's get started:
+
 1. Clone the repository,
 
 ```
-$ git clone https://github.com/IBM/max-tutorial-app-python
+$ git clone https://github.com/IBM/max-tutorial-app-python.git
 ```
 
-2. Open `app.py` in suitable editor and complete **TODO T1** and **TODO T2** using the learning from the above step.
+2. Open `app.py` in a suitable editor and complete **TODO T1** and **TODO T2** by applying your previous experience with the notebook.
 
-### 4. (Optional) MAX models in IOT using Node-RED
+More information can be found in the README of the corresponding repository, [here](https://github.com/IBM/max-tutorial-app-python).
+
+### 4. (Optional) MAX models for IOT using Node-RED
 
 This introductory tutorial explains how you can process image, video, audio, or text data by using deep learning models from the Model Asset Exchange in Node-RED flows.
 
