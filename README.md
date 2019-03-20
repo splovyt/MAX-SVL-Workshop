@@ -156,6 +156,14 @@ $ git clone https://github.com/IBM/max-tutorial-app-python
 
 2. Open `app.py` in suitable editor and complete **TODO T1** and **TODO T2** using the learning from the above step.
 
+#### (Optional) 4. MAX models in IOT using Node-RED
+
+This introductory tutorial explains how you can process image, video, audio, or text data by using deep learning models from the Model Asset Exchange in Node-RED flows.
+
+https://developer.ibm.com/tutorials/learn-how-to-leverage-deep-learning-in-your-node-red-flows/
+
+
+<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/node-red.png" width=100% align="center">
 
 ### Done, but want to learn more?
 
