@@ -135,7 +135,7 @@ As a first step, let's understand how to programmatically access this API using 
 
 Along with object detector, we will look at some of the other exciting AI models that the Model Asset Exchange has to offer. For this demonstration, we will use the Python programming language with [Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html) as an interactive coding environment. 
 
-Following the [installation](https://jupyter.readthedocs.io/en/latest/install.html) of Jupyter, you can navigate to the `3. Exploring MAX` folder in this repository using the terminal. Start a Jupyter Notebook with the following command:
+Following the [installation](https://jupyter.readthedocs.io/en/latest/install.html) of Jupyter, you can navigate to the `Exploring_MAX` folder in this repository using the terminal. Start a Jupyter Notebook with the following command:
 
 `jupyter notebook`
 
