@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/ibm-logo.png" height=50 align="right">
 
-# Getting Started with Deep Learning and the Model Asset Exchange (MAX)
+# Getting Started with the Model Asset Exchange (MAX)
 
 Getting started with the bleeding edge of Deep Learning is extremely easy.. and free!
 
