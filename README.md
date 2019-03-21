@@ -6,7 +6,7 @@ Getting started with the bleeding edge of Deep Learning is extremely easy.. and 
 
 This repository contains all information for the hands-on part of the session.
 
-Slides URL: **[Add slides URL here]**
+Slides URL: [slides.pdf](https://github.ibm.com/CODAIT/max-workshop-svl/blob/master/slides.pdf)
 
 ## While waiting...
 
@@ -45,7 +45,7 @@ If everything works well, you will see the following message as output:
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
 
-_That works? Great!_
+That works? Great!
 
 Go to `http://0.0.0.0:5000/` in your browser to check out the REST API.
 
@@ -53,7 +53,7 @@ Go to `http://0.0.0.0:5000/` in your browser to check out the REST API.
 
 This URL will return a more technical overview of the model, including all information about the REST API and what endpoints are available. 
 
-`An API (application programming interface) is a set of functions associated with a computer algorithm that allows us to request (GET) information from the underlying algorithm or send information (POST) to the underlying algorithm. This API is basically the front door of the factory (= object detection algorithm).`
+_An API (application programming interface) is a set of functions associated with a computer algorithm that allows us to request (GET) information from the underlying algorithm or send information (POST) to the underlying algorithm. This API is basically the front door of the factory (= object detection algorithm)._
 
 You can try out the API by unfolding the `model` section. Under the `model` section, you can find the three endpoints of this API:
 
@@ -61,16 +61,15 @@ You can try out the API by unfolding the `model` section. Under the `model` sect
 - `/model/metadata`
 - `/model/predict`
 
-* The first two endpoints are `GET` methods. This means that calling these (by unfolding and clicking the `Try it out` and       `Execute` buttons) will return us information. 
+The first two endpoints are `GET` methods. This means that calling these (by unfolding and clicking the `Try it out` and       `Execute` buttons) will return us information. 
+- `/model/labels` returns the list of objects that the model is able to detect in text-format in the response body. 
+- `/model/metadata` returns the metadata (technical information) about the model. 
 
-   - `/model/labels` returns the list of objects that the model is able to detect in text-format in the response body. 
-   - `/model/metadata` returns the metadata (technical information) about the model. 
+The last endpoint, `/model/predict`, is a `POST` method. This means that we can send information to this endpoint in order     to pass it to the object detection algorithm. We can send an image to this `/model/predict` endpoint in order to have the     model's object predictions returned. 
 
-* The last endpoint, `/model/predict`, is a `POST` method. This means that we can send information to this endpoint in order     to pass it to the object detection algorithm. We can send an image to this `/model/predict` endpoint in order to have the     model's object predictions returned. 
-
-  Click on the `Try it out` button, upload an image, and click `Execute`. As a result, you should receive `Code: 200` for a     successful query. In addition, under `Details`, one can find the `Response body` containing the predictions. 
+Click on the `Try it out` button, upload an image, and click `Execute`. As a result, you should receive `Code: 200` for a     successful query. In addition, under `Details`, one can find the `Response body` containing the predictions. 
   
-  An example of the response body for [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image is:
+An example of the response body for [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image is:
 
 ```
 {
