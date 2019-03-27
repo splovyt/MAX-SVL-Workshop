@@ -1,4 +1,6 @@
-<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/ibm-logo.png" height=50 align="right">
+(!) This repository is archived and out of date, because it was moved to https://github.com/CODAIT/MAX-SVL-Workshop
+
+<img src="docs/ibm-logo.png" height=50 align="right">
 
 # Getting Started with the Model Asset Exchange (MAX)
 
@@ -6,7 +8,7 @@ Getting started with the bleeding edge of Deep Learning is extremely easy.. and 
 
 This repository contains all information for the hands-on part of the session.
 
-Slides URL: [slides.pdf](https://github.ibm.com/CODAIT/max-workshop-svl/blob/master/slides.pdf)
+Slides URL: [slides.pdf](slides.pdf)
 
 ## While waiting...
 
@@ -26,7 +28,7 @@ Following the installation of docker, you can check whether the installation was
 
 If the above command returns the Docker version, you are pretty much there! 
 
-<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/object-detection.png" width=300 align="right">
+<img src="docs/object-detection.png" width=300 align="right">
 
 ### 1. Using a pre-built Docker image from Docker Hub
 
@@ -69,7 +71,7 @@ The last endpoint, `/model/predict`, is a `POST` method. This means that we can 
 
 Click on the `Try it out` button, upload an image, and click `Execute`. As a result, you should receive `Code: 200` for a     successful query. In addition, under `Details`, one can find the `Response body` containing the predictions. 
   
-An example of the response body for [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image is:
+An example of the response body for [this](docs/jockey.jpg) image is:
 
 ```
 {
@@ -109,7 +111,7 @@ This can be interpreted as follows:
 
 For more information, or if you are having trouble, please check out [MAX Object Detector README](https://github.com/IBM/MAX-Object-Detector/blob/master/README.md)
 
-<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/swagger-ui.png" width=100% align="center">
+<img src="docs/swagger-ui.png" width=100% align="center">
 
 
 ### 2. Consuming a MAX model: Using the Object Detector
@@ -118,11 +120,11 @@ Now that you have the Object Detector up and running, there are a couple ways to
 
 **The user-friendly WebApp**
 
-Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under the `Upload an image` section on the left, you can upload and submit an image to the model. Try [this](https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/jockey.jpg) image for example.
+Go to `http://0.0.0.0:5000/app` in your browser to check out the web app. Under the `Upload an image` section on the left, you can upload and submit an image to the model. Try [this](docs/jockey.jpg) image for example.
 
 The `Probability Threshold` slider can be adjusted to show less certain labels (lower threshold) or more certain labels (higher threshold). On the right, you can find the `Labels Found` section in which you can click to highlight or deactivate the corresponding object.
 
-<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/webapp.png" width=100% align="center">
+<img src="docs/webapp.png" width=100% align="center">
 
 Instead of opening a browser, copying the url and uploading an image to the `/model/predict` endpoint by hand, you can programmatically access this API using a library for your programming language of choice. For example, in Python, one can use the `requests` library to efficiently and automatically make `GET` and `POST` requests. An example of this can be found in the notebook under the next section.
 
@@ -176,7 +178,7 @@ This introductory tutorial explains how you can process image, video, audio, or 
 https://developer.ibm.com/tutorials/learn-how-to-leverage-deep-learning-in-your-node-red-flows/
 
 
-<img src="https://raw.githubusercontent.com/splovyt/MAX-SVL-Workshop/master/docs/node-red.png" width=100% align="center">
+<img src="docs/node-red.png" width=100% align="center">
 
 ### Done, but want to learn more?
 
